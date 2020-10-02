@@ -1,3 +1,7 @@
-# Doki Doki Dance Club
+# InsanerYuri.cn
 
-http://yuri.dance is a website aimed to honor the cutest and most adorable scene from Doki Doki Literature Club.
+https://insaneryuri.cn
+
+A more vanilla version of https://yuri.dance and also the homepage for InsanerYuri
+
+Better with Wallpaper Engine

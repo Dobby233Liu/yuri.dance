@@ -106,13 +106,13 @@ document.addEventListener("DOMContentLoaded", function() {
 				if (hidden) {
 					loopFrame = 30000
 				}
-				stageScale = (1 + (loopFrame * 0.0001))
-				stage.style.transform = "scale(" + stageScale + ")"
+				// stageScale = (1 + (loopFrame * 0.0001))
+				// stage.style.transform = "scale(" + stageScale + ")"
 				stage.style.marginLeft = calcStageLeft()
 				stage.style.marginTop = ((300 / maxTime) * loopFrame) + "px"
-				if (loopFrame++ > maxTime) {
-					window.clearInterval(loop)
-				}
+				// if (loopFrame++ > maxTime) {
+				// 	window.clearInterval(loop)
+				// }
 			}
         }, 10)
     }, 1)
