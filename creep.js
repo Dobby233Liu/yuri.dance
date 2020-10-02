@@ -34,45 +34,6 @@ document.addEventListener("DOMContentLoaded", function() {
 				this.currentTime = 0
 				this.play()
 				bounceZoom()
-			} else if (state == 0) {
-				state = 1
-				overlay.className += " afterHidden"
-				yuri.src = yuri.src.replace("yuri.png", "yuri2.png")
-				eyes.src = eyes.src.replace("eyes.png", "eyes2.png")
-				stage.style.paddingLeft = stage.offsetWidth + "px"
-				var returnLoop = window.setInterval(function() {
-					if (!document.hidden) {
-						if (state == 1) {
-							state = 2
-							window.clearInterval(eyeLoop)
-							eyes.style.marginLeft = 0
-							eyes.style.marginTop = -yuri.offsetHeight + "px"
-							face = document.createElement('div')
-							face.style.pointerEvents = "all"
-							face.style.zIndex = 4
-							face.style.position = "absolute"
-							face.onmouseover = function() {
-								this.onmouseover = null
-								state = 3
-								this.remove(0)
-								stage.style.transition = "padding-left 45s"
-								stage.style.paddingLeft = 0
-							}
-							updateFaceCoords()
-							document.body.prepend(face)
-						} else if (state == 3) {
-							window.clearInterval(returnLoop)
-							eyeLoop = window.setInterval(function() {
-								moveEyes()
-							}, 25)
-							heartbeat = new Audio("assets/audio/heartbeat_lower.ogg")
-							heartbeat.addEventListener('timeupdate', onHeartbeat, false)
-							heartbeat.play()
-							heartbeat.volume = 0.5
-							bounceZoom()
-						}
-					}
-				}, 1000)
 			}
         }
     }
